@@ -1,4 +1,4 @@
-# Easy upload
+# EasyuploadJS
 Easy to implement upload control that is integrated with jquery. Some of the good features that I can list:
 
   - Easy to implement
