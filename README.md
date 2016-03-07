@@ -382,3 +382,116 @@ $("#txtFile").upload("config",{onError:function(data){
 	/*code here*/
 }});
 ```
+
+### Methods
+#### Config
+Allows getting or settings values to attributes or events after initialization. It is possible to retreieve or set any attribute or event to the upload control.
+
+**Code example**
+
+Set values after initialization:
+
+```javascript
+//setter
+$("#txtFile").upload("config",{
+	onError:function(data){
+	/*code here*/
+	}
+    chunkSize:100,
+    url:'/upload',
+    onError:function(data){/*my code*/}
+});
+```
+
+Get values after initialization
+```javascript
+//setter
+var url = $("#txtFile").upload("config","url");
+var chunkSize = $("#txtFile").upload("config","chunkSize");
+var allowedExtensions = $("#txtFile").upload("config","allowedExtensions");
+```
+#### status
+Returns an enumerable with a list of the status that a file can have before, during and after uploading.
+
+**Code example**
+
+```javascript
+//setter
+ var statusList=$('#txtFile').upload('status');
+ /*The status list returns the following values
+ {
+        inserted: 0,
+        uploading: 1,
+        uploaded: 2,
+        paused: 3,
+        stopped: 4,
+        error: -1
+    }
+ */
+```
+
+#### upload
+
+If there is at least one file selected and if it is set the property autoUpload as false, this allows the upload start sending chunks to the server.
+
+**Code example**
+```javascript
+//setter
+ $('#txtFile').upload('upload');
+```
+#### stop
+If there is any file whose status is not error, stopped or inserted this method allows interrupting the upload permanently. Also it will send the server a request using the delete verb indicating that the upload has been aborted.
+
+**Code example**
+```javascript
+//setter
+ $('#txtFile').upload('stop', "filename.pdf");
+```
+#### pause
+If there is any file whose status is not error, stopped or inserted this method allows interrupting the upload without canceling. 
+**Code example**
+```javascript
+//setter
+ $('#txtFile').upload('pause', "filename.pdf");
+```
+
+
+#### resume
+
+If there is any file whose status is paused this method allows resuming the upload from where it left off. 
+**Code example**
+```javascript
+//setter
+ $('#txtFile').upload('resume', "filename.pdf");
+```
+
+#### retry
+If there is any file whose status is error this method allows resuming the upload from where it left off. 
+**Code example**
+```javascript
+//setter
+ $('#txtFile').upload('resume', "filename.pdf");
+```
+#### deleteFile
+If there is any file whose status is inserted this method allows removing the file from the upload control. 
+**Code example**
+```javascript
+//setter
+ $('#txtFile').upload('delete', "filename.pdf");
+```
+
+#### getFilesList
+This method allows retrieving a list of all the files that have been inserted to the upload control no matter their status.
+**Code example**
+```javascript
+//setter
+ var file = $('#txtFile').upload('getFilesList');
+```
+
+#### getFile
+This method allows retrieving a file, given a name, from upload control no matter its status.
+**Code example**
+```javascript
+//setter
+ var file = $('#txtFile').upload('getFile', 'fileName.pdf');
+```
