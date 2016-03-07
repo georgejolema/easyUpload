@@ -238,11 +238,11 @@ Allows including additional information to the upload when transferring to the s
 
 **Code example**
 
-To initialize with chunkSize specified
+To initialize with Additional specified
 ```javascript
 $("#txtFile").upload({additional:{param1: 'value1', param2: 56}});
 ```
-Get or set the chunkSize after initialization:
+Get or set the Additional after initialization:
 
 ```javascript
 //getter
@@ -258,15 +258,127 @@ Determines the url of the server where the upload is going to send the chunks
 
 **Code example**
 
-To initialize with chunkSize specified
+To initialize with Url specified
 ```javascript
 $("#txtFile").upload({url:'/upload'});
 ```
-Get or set the chunkSize after initialization:
+Get or set the Url after initialization:
 
 ```javascript
 //getter
 $("#txtFile").upload("config","url");
 //setter
 $("#txtFile").upload("config",{url:"/upload"});
+```
+### Events
+#### onfilesSelected([file])
+Triggers when a file is selected successfully to upload.
+**Code example**
+
+To initialize with onfilesSelected specified
+```javascript
+$("#txtFile").upload({onfilesSelected:function(file){
+	/*code here*/
+}});
+```
+Set the onFileSelected after initialization:
+
+```javascript
+//setter
+$("#txtFile").upload("config",{onfilesSelected:function(file){
+	/*code here*/
+}});
+```
+#### onFinishedUploadingFiles([successful], [error])
+Triggers when all the files finished uploading or with errors.
+**Code example**
+
+To initialize with chunkSize specified
+```javascript
+$("#txtFile").upload({onFinishedUploadingFiles:function(successful, error){
+	/*code here*/
+}});
+```
+Set the onFinishedUploadingFiles after initialization:
+
+```javascript
+//setter
+$("#txtFile").upload("config",{onFinishedUploadingFiles:function(successful, error){
+	/*code here*/
+}});
+```
+
+#### onFinishedUploadingFile([file])
+Triggers when a file has uploaded successfully.
+**Code example**
+
+To initialize with onFinishedUploadingFile specified
+```javascript
+$("#txtFile").upload({onFinishedUploadingFile:function(file){
+	/*code here*/
+}});
+```
+Set the onFinishedUploadingFile after initialization:
+
+```javascript
+//setter
+$("#txtFile").upload("config",{onFinishedUploadingFile:function(file){
+	/*code here*/
+}});
+```
+
+#### onfilesSelected([file])
+Triggers when a file is selected successfully to upload.
+**Code example**
+
+To initialize with chunkSize specified
+```javascript
+$("#txtFile").upload({onfilesSelected:function(file){
+	/*code here*/
+}});
+```
+Set the onFileSelected after initialization:
+
+```javascript
+//setter
+$("#txtFile").upload("config",{onfilesSelected:function(file){
+	/*code here*/
+}});
+```
+
+#### onChunkUploaded([file], [chunkNo], [uploaded])
+Triggers when a piece of a file uploaded successfully to upload.
+**Code example**
+
+To initialize with onChunkUploaded specified
+```javascript
+$("#txtFile").upload({onChunkUploaded:function(file, chunkNo, uploaded){
+	/*code here*/
+}});
+```
+Set the onChunkUploaded after initialization:
+
+```javascript
+//setter
+$("#txtFile").upload("config",{onChunkUploaded:function(file, chunkNo, uploaded){
+	/*code here*/
+}});
+```
+#### onError([data])
+Triggers when a piece of a file uploaded successfully to upload.
+**Code example**
+
+To initialize with onError specified
+```javascript
+$("#txtFile").upload({onError:function(data){
+	/*code here*/
+}});
+```
+Set the onError after initialization:
+
+```javascript
+//setter
+$("#txtFile").upload("config",{onError:function(data){
+	/*code here*/
+}});
 ```
