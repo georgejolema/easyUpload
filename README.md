@@ -13,7 +13,7 @@ Easy upload depends of:
 * [jQuery]
 
 ### Installation
-Copy easyUpload.js to your src folder and your all set to go.
+Copy dist/easyUpload.js to your src folder and your all set to go.
 
 ### Implementation
 Add the reference in your html file.
