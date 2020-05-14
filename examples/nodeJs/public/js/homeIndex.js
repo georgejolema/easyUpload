@@ -12,7 +12,7 @@
             autoUpload: false,
             modestring64: true,
             //disallowedExtensions: ["exe", "js", "msi", "css"],//if allowed extensions is defined this will be ignored
-            allowedExtensions: ["mp4"],
+            allowedExtensions: ["mp4", "png", "jpg"],
             additional: { param1: 1, param2: "hello" }, //you can add additional information to send to the server
             onfilesSelected: function (files)
             {

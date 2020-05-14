@@ -1,0 +1,29 @@
+{
+  "name": "easyupload",
+  "version": "1.0.0",
+  "description": "Easy to implement upload control that is integrated with jquery. Some of the good features that I can list:",
+  "main": "src/easyUpload.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "prestart": "cd examples/nodejs && npm i",
+    "build": "webpack --config webpack.config.js",
+    "start": "cd examples/nodejs && node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/georgejolema/easyUpload.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/georgejolema/easyUpload/issues"
+  },
+  "homepage": "https://github.com/georgejolema/easyUpload#readme",
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

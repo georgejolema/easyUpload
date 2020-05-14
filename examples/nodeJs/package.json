@@ -15,12 +15,5 @@
     "express": "^4.13.4",
     "express-ejs-layouts": "^2.0.0",
     "multer": "^1.1.0"
-  },
-  "devDependencies": {
-    "bower": "^1.7.7",
-    "gulp": "^3.9.1",
-    "gulp-inject": "^3.0.0",
-    "gulp-nodemon": "^2.0.6",
-    "wiredep": "^3.0.0"
   }
 }
