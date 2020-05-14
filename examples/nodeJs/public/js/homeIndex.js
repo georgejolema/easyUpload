@@ -7,7 +7,7 @@
 		$("#txtFile").upload({
 			chunkSize:50,
 			url:"/api/upload",//"/api/uploadfiledata",
-            maxFileSize: 10 * 1024 * 1024,
+            maxFileSize: 100 * 1024 * 1024,
             maxNumFiles: 5,
             autoUpload: false,
             modestring64: true,
@@ -66,7 +66,7 @@
             var files = $('#txtFile').upload('getFilesList');
             var statusList=$('#txtFile').upload('status');
             for (var i = 0; i < files.length; i++) 
-                if (files[i].status == statusList.inserted) {
+                if (files[i].status === statusList.inserted) {
                     $('#txtFile').upload('upload');                    
                     var item = $('li[data-name]');
                     item.find('.delete-button').addClass('hidden');

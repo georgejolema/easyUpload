@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/easyUpload.js',
     output: {
         filename: 'easyUpload.js',

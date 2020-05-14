@@ -212,7 +212,7 @@ function fileUploadModelObject(fileUploader, options) {
 
         upload() {
             for (let i = 0; i < files.length; i++) {
-                if (files[i].status == statusList.inserted)
+                if (files[i].status === statusList.inserted)
                     files[i].upload();
             }
         }
